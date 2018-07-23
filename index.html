@@ -1,0 +1,35 @@
+<html lang="zh">
+  <head>
+    <title>以核養綠公投連署點</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="alert" class="alert alert-warning alert-dismissible fade show container" role="alert">
+        <strong class="pr-2">Warning:</strong><span id="errMsg"></span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <header class="container">
+        <h1>以核養綠公投連署點</h1>
+      </header>
+      <div id="map"></div>
+      <div id="pointInfo" class="container mt-2">
+        <h2 id="pointTitle"></h2>
+        <p id="pointAddress"></p>
+        <p id="pointTel"></p>
+        <p id="pointOpenTime"></p>
+        <p><a id="getPointRoute" class="btn btn-primary disabled" href="#" target="_blank">取得前往路徑</a><a id="getNearestPoint" href="#" class="btn btn-secondary">尋找最近的連署點</a><a href=""></a></p>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNMjXf5a8TXVDi0Y58ICda-SbfIBnKEvo&callback=initMap" async defer></script>
+    <script src="js/location.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
