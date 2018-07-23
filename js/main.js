@@ -37,7 +37,7 @@ function getCurrentPositionPromise(resolve, reject) {
       lng: parseFloat(position.coords.longitude)
     }
 
-    console.log(pos)
+    // console.log(pos)
     resolve(pos)
   }, function (err) {
     var errMsg, pos, $alert, $errMsg
