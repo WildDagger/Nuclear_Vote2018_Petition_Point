@@ -5,9 +5,10 @@ var petition_location = [
     title: '台北市議員王鴻薇辦公室',
     address: '台北市延壽街145號2樓',
     tel: '02-27563646',
-    openTime: '',
+    openTime: '（一）（二）（三）（五）0930 - 1200；（四）1430 - 2100',
     comment: '',
-    position: { lat: 25.0569558, lng: 121.5632166 }
+    position: { lat: 25.0569558, lng: 121.5632166 },
+    type: 'solid'
   },
   {
     id: 'taipei_002',
@@ -15,9 +16,10 @@ var petition_location = [
     title: 'MaSe咖啡',
     address: '台北市八德路二段300巷38號',
     tel: '02-27771231',
-    openTime:  '',
+    openTime: '（一） ～ （五）0730 - 1700；（六） ～ （日）1000 - 1900',
     comment: '',
-    position: { lat: 25.0461232, lng: 121.5423724 }
+    position: { lat: 25.0461232, lng: 121.5423724 },
+    type: 'solid'
   },
   {
     id: 'taipei_003',
@@ -27,7 +29,8 @@ var petition_location = [
     tel: '02-23023625',
     openTime: '',
     comment: '',
-    position: { lat: 25.0308775, lng: 121.5007555 }
+    position: { lat: 25.0308775, lng: 121.5007555 },
+    type: 'solid'
   },
   {
     id: 'new_taipei_001',
@@ -37,7 +40,19 @@ var petition_location = [
     tel: '02-29175777',
     openTime: '',
     comment: '',
-    position: { lat: 24.965012, lng: 121.540189 }
+    position: { lat: 24.965012, lng: 121.540189 },
+    type: 'solid'
+  },
+  {
+    id: 'new_taipei_002',
+    city: '新北市',
+    title: '歐鎷印刷設計',
+    address: '新北市三重區安樂街72號1樓',
+    tel: '0975-565053',
+    openTime: '（一） ～ （五）1000 - 1900',
+    comment: '',
+    position: { lat: 25.0693335, lng: 121.4950589 },
+    type: 'solid'
   },
   {
     id: 'taoyuan_001',
@@ -47,7 +62,8 @@ var petition_location = [
     tel: '',
     openTime: '',
     comment: '',
-    position: { lat: 25.0556854, lng: 121.3622269 }
+    position: { lat: 25.0556854, lng: 121.3622269 },
+    type: 'solid'
   },
   {
     id: 'hsinchu_city_001',
@@ -57,7 +73,8 @@ var petition_location = [
     tel: '',
     openTime: '',
     comment: '',
-    position: { lat: 24.8073791, lng: 120.967753 }
+    position: { lat: 24.8073791, lng: 120.967753 },
+    type: 'solid'
   },
   {
     id: 'taichung_001',
@@ -67,7 +84,8 @@ var petition_location = [
     tel: '',
     openTime: '',
     comment: '',
-    position: { lat: 24.2645059, lng: 120.5603737 }
+    position: { lat: 24.2645059, lng: 120.5603737 },
+    type: 'solid'
   },
   {
     id: 'changhua_001',
@@ -77,7 +95,8 @@ var petition_location = [
     tel: '04-8364864',
     openTime: '09:00-18:00',
     comment: '',
-    position: { lat: 23.9575618, lng: 120.573998 }
+    position: { lat: 23.9575618, lng: 120.573998 },
+    type: 'solid'
   },
   {
     id: 'yunlin_001',
@@ -87,7 +106,8 @@ var petition_location = [
     tel: '05-7821445',
     openTime: '08:00-20:00',
     comment: '',
-    position: { lat: 23.5810346, lng: 120.2991545 }
+    position: { lat: 23.5810346, lng: 120.2991545 },
+    type: 'solid'
   },
   {
     id: 'tainan_001',
@@ -97,7 +117,8 @@ var petition_location = [
     tel: '06-2906669',
     openTime: '',
     comment: '',
-    position: { lat: 22.9787599, lng: 120.2254638 }
+    position: { lat: 22.9787599, lng: 120.2254638 },
+    type: 'solid'
   },
   {
     id: 'taitung_001',
@@ -107,7 +128,8 @@ var petition_location = [
     tel: '089-223320',
     openTime: '星期一-六 09:00-21:00',
     comment: '',
-    position: { lat: 22.7785562, lng: 121.1253842 }
+    position: { lat: 22.7785562, lng: 121.1253842 },
+    type: 'solid'
   },
   {
     id: 'hualien_001',
@@ -117,6 +139,22 @@ var petition_location = [
     tel: '089-223320',
     openTime: '09:00-18:00',
     comment: '',
-    position: { lat: 23.9952489, lng: 121.5961416 }
+    position: { lat: 23.9952489, lng: 121.5961416 },
+    type: 'solid'
+  },
+  {
+    id: 'mobile_001',
+    city: '行動連署站',
+    title: '台灣鯛民',
+    address: '歪腰郵筒 (台北市中山區龍江路104號)',
+    tel: '',
+    openTime: '2018/07/28 15:00-17:00',
+    comment: '',
+    position: { lat: 25.052747, lng: 121.540255 },
+    type: 'solid',
+    period: {
+      start: new Date(2018, 7, 28, 15, 0, 0),
+      end: new Date(2018, 7, 28, 17, 0, 0)
+    }
   }
 ]
