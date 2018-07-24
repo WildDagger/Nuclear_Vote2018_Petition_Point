@@ -61,13 +61,10 @@ function getCurrentPositionPromise(resolve, reject) {
     // 顯示錯誤通知
     if ($errMsg) {
       $errMsg.text(errMsg)
-    } else {
-      console.log(errMsg)
+      $alert.show()
     }
-
-    if ($alert) {
-      $alert.alert()
-    }
+    
+    console.log(errMsg)
 
     // 將pos設定為預設位置 (台北車站)
     pos = { lat: 25.048734, lng: 121.514231 }
