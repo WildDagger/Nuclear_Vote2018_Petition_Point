@@ -85,11 +85,23 @@ function jQueryMain(currentPosition, map, $) {
   var markerPoints = []
 
   $.each(petition_location, function(index, item) {
+    // 並非有效地點的情況下不進行後續動作
+    if (item.active == false) return
+
+    var iconURI
+
+    if (item.type == 'mobile') {
+      iconURI = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
+    } else {
+      iconURI = 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+    }
+
     var marker = new google.maps.Marker({
       map: map,
       position: item.position,
       title: item.title,
-      icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+      icon: iconURI,
+      animation: google.maps.Animation.BOUNCE
     })
 
     marker.addListener('click', function() {
@@ -128,6 +140,14 @@ function jQueryMain(currentPosition, map, $) {
     path: [
       currentPosition,
       markerPoints[0].base.position
+    ],
+    icons: [
+      {
+        icon: {
+          path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW
+        },
+        offset: '100%'
+      }
     ],
     geodesic: true,
     strokeColor: '#ff0000',

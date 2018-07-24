@@ -30,6 +30,29 @@ var petition_location = [
     openTime: '',
     comment: '',
     position: { lat: 25.0308775, lng: 121.5007555 },
+    type: 'solid',
+    active: false
+  },
+  {
+    id: 'taipei_004',
+    city: '台北市',
+    title: '台北市議員徐弘庭辦公室',
+    address: '台北市建國南路一段285號',
+    tel: '',
+    openTime: '',
+    comment: '',
+    position: { lat: 25.035907, lng: 121.538447 },
+    type: 'solid'
+  },
+  {
+    id: 'taipei_005',
+    city: '台北市',
+    title: '台北市大安區龍圖里里長蕭萬居辦公室',
+    address: '台北市建國南路二段25巷6號 (建國花市旁)',
+    tel: '',
+    openTime: '',
+    comment: '',
+    position: { lat: 25.0324396, lng: 121.5382386 },
     type: 'solid'
   },
   {
@@ -121,6 +144,17 @@ var petition_location = [
     type: 'solid'
   },
   {
+    id: 'tainan_002',
+    city: '台南市',
+    title: '台南市議員謝龍介服務處',
+    address: '台南市北區海安路三段20號',
+    tel: '06-2268268',
+    openTime: '',
+    comment: '',
+    position: { lat: 23.001203, lng: 120.1991844 },
+    type: 'solid'
+  },
+  {
     id: 'taitung_001',
     city: '台東縣',
     title: '精工眼鏡行',
@@ -151,7 +185,7 @@ var petition_location = [
     openTime: '2018/07/28 15:00-17:00',
     comment: '',
     position: { lat: 25.052747, lng: 121.540255 },
-    type: 'solid',
+    type: 'mobile',
     period: {
       start: new Date(2018, 7, 28, 15, 0, 0),
       end: new Date(2018, 7, 28, 17, 0, 0)
