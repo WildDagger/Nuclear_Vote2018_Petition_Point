@@ -19,7 +19,8 @@ var petition_location = [
     openTime: '（一） ～ （五）0730 - 1700；（六） ～ （日）1000 - 1900',
     comment: '',
     position: { lat: 25.0461232, lng: 121.5423724 },
-    type: 'solid'
+    type: 'solid',
+    active: false
   },
   {
     id: 'taipei_003',
@@ -34,14 +35,25 @@ var petition_location = [
     active: false
   },
   {
-    id: 'taipei_004',
+    id: 'taipei_004_Wenshan',
     city: '台北市',
     title: '台北市議員徐弘庭辦公室',
-    address: '台北市建國南路一段285號',
-    tel: '',
-    openTime: '',
+    address: '台北市文山區忠順街一段26巷1弄1號',
+    tel: '02-87806918',
+    openTime: '(一)-(日) 09:00-21:00',
     comment: '',
-    position: { lat: 25.035907, lng: 121.538447 },
+    position: { lat: 24.9837598, lng: 121.5592489 },
+    type: 'solid'
+  },
+  {
+    id: 'taipei_004_Council',
+    city: '台北市',
+    title: '台北市議員徐弘庭議會研究室',
+    address: '台北市仁愛路四段507號616研究室',
+    tel: '',
+    openTime: '(一)-(五) 09:30-18:30',
+    comment: '',
+    position: { lat: 25.038147, lng: 121.5619812 },
     type: 'solid'
   },
   {
@@ -53,6 +65,28 @@ var petition_location = [
     openTime: '',
     comment: '',
     position: { lat: 25.0324396, lng: 121.5382386 },
+    type: 'solid'
+  },
+  {
+    id: 'taipei_006',
+    city: '台北市',
+    title: '台北市議員候選人李柏毅競選辦公室',
+    address: '台北市文山區興隆路一段235號',
+    tel: '02-27293536',
+    openTime: '(一)~(日) 10:00 - 16:00',
+    comment: '',
+    position: { lat: 24.9998769, lng: 121.543987 },
+    type: 'solid'
+  },
+  {
+    id: 'taipei_007',
+    city: '台北市',
+    title: '權麒法律事務所 (巴毛)',
+    address: '台北市羅斯福路91號4樓之2',
+    tel: '02-23688013',
+    openTime: '(一)-(五) 9:00-12:00/14:00-18:00',
+    comment: '',
+    position: { lat: 25.022693, lng: 121.526267 },
     type: 'solid'
   },
   {
@@ -89,6 +123,17 @@ var petition_location = [
     type: 'solid'
   },
   {
+    id: 'taoyuan_002',
+    city: '桃園市',
+    title: '南台灣火雞肉飯',
+    address: '桃園市桃園區國強一街311號1樓',
+    tel: '',
+    openTime: '10:30-22:00',
+    comment: '',
+    position: { lat: 24.9910237, lng: 121.2796503 },
+    type: 'solid'
+  },
+  {
     id: 'hsinchu_city_001',
     city: '新竹市',
     title: '新竹市長參選人許明財競選總部',
@@ -100,13 +145,24 @@ var petition_location = [
     type: 'solid'
   },
   {
+    id: 'hsinchu_county_001',
+    city: '新竹縣',
+    title: '光合花舖 PS garden',
+    address: '新竹縣竹北市新光街161號',
+    tel: '',
+    openTime: '(一)、(三)-(日) 13:00-17:00 (週二店休)',
+    comment: '',
+    position: { lat: 24.8385335, lng: 120.9981946 },
+    type: 'solid'
+  },
+  {
     id: 'taichung_001',
     city: '台中市',
-    title: '台中市清水區南社里里長賴朝維服務處',
+    title: '台中市清水區南社里里長顏朝雄服務處',
     address: '台中市清水區南社里民族路二段75巷3號',
-    tel: '',
+    tel: '04-26263567',
     openTime: '',
-    comment: '',
+    comment: '因里長忙碌常外出，請先致電確認里長在服務處',
     position: { lat: 24.2645059, lng: 120.5603737 },
     type: 'solid'
   },
@@ -155,6 +211,94 @@ var petition_location = [
     type: 'solid'
   },
   {
+    id: 'kaohsiung_001',
+    city: '高雄市',
+    title: '高雄市議員李長生阿蓮區辦公室',
+    address: '高雄市阿蓮區忠孝路30號',
+    tel: '07-6311609',
+    openTime: '(一)-(五) 08:00-12:00/13:30-17:00',
+    comment: '請洽陳秘書',
+    position: { lat: 22.8792892, lng: 120.3335992 },
+    type: 'solid'
+  },
+  {
+    id: 'kaohsiung_002',
+    city: '高雄市',
+    title: '高雄市小港區宏亮里里長宋震寶服務處',
+    address: '高雄市小港區宏亮里山明路509號',
+    tel: '',
+    openTime: '(一)-(日) 08:30-21:30',
+    comment: '',
+    position: { lat: 22.568466, lng: 120.362167 },
+    type: 'solid'
+  },
+  {
+    id: 'kaohsiung_003',
+    city: '高雄市',
+    title: '建立洗衣店',
+    address: '高雄市左營區明華一路62號',
+    tel: '',
+    openTime: '(一)-(二) 09:00-21:00',
+    comment: '',
+    position: { lat: 22.662827, lng: 120.3096441 },
+    type: 'solid'
+  },
+  {
+    id: 'kaohsiung_004',
+    city: '高雄市',
+    title: '寶珠蛋黃麵 (武廟旗艦店)',
+    address: '高雄市苓雅區武廟路128-3號',
+    tel: '',
+    openTime: '(一)-(日) 11:00-23:00 (14:00-17:00 可代收連署書)',
+    comment: '',
+    position: { lat: 22.631218, lng: 120.328649 },
+    type: 'solid'
+  },
+  {
+    id: 'kaohsiung_005',
+    city: '高雄市',
+    title: '李明堂',
+    address: '高雄市三民區遼寧一街150號',
+    tel: '0910-760678',
+    openTime: '18:00-21:00',
+    comment: '',
+    position: { lat: 22.6422642, lng: 120.3096712 },
+    type: 'solid'
+  },
+  {
+    id: 'kaohsiung_006',
+    city: '高雄市',
+    title: '咖啡林咖啡',
+    address: '高雄市新興區中山一街119號',
+    tel: '07-2855300',
+    openTime: '(二)-(六) 12:00-21:00 / (日) 12:00-18:00',
+    comment: '',
+    position: { lat: 22.6317076, lng: 120.3012922 },
+    type: 'solid'
+  },
+  {
+    id: 'kaohsiung_007',
+    city: '高雄市',
+    title: '新福山社會發展協會 (黃國棟服務處)',
+    address: '高雄市左營區榮總路141巷 (榮佑市場外側)',
+    tel: '07-3107687',
+    openTime: '15:00-18:00 / 18:00-21:00',
+    comment: '',
+    position: { lat: 22.6805048, lng: 120.3215284 },
+    type: 'solid'
+  },
+  {
+    id: 'kaohsiung_008',
+    city: '高雄市',
+    title: '實鮮蔬果汁重愛店',
+    address: '高雄市左營區重愛路51號 (重慶公園對面)',
+    tel: '07-3452911',
+    openTime: '12:00- 21:00',
+    comment: '',
+    position: { lat: 22.683066, lng: 120.318688 },
+    type: 'solid'
+  },
+  {
     id: 'taitung_001',
     city: '台東縣',
     title: '精工眼鏡行',
@@ -187,8 +331,39 @@ var petition_location = [
     position: { lat: 25.052747, lng: 121.540255 },
     type: 'mobile',
     period: {
-      start: new Date(2018, 7, 28, 15, 0, 0),
-      end: new Date(2018, 7, 28, 17, 0, 0)
+      start: new Date(2018, 6, 28, 15, 0, 0),
+      end: new Date(2018, 6, 28, 17, 0, 0)
+    }
+  },
+  {
+    id: 'mobile_002_FF_Day1',
+    city: '行動連署站',
+    title: 'FF32 花博爭豔館同人攤位',
+    address: '台北市中山區玉門街1號',
+    tel: '',
+    openTime: '2018/07/28 10:00-16:00',
+    comment: 'W45, W46: 果爸玩列印；綾靖設計；邢天紙模；口袋工房',
+    position: { lat: 25.0704569, lng: 121.520461 },
+    type: 'mobile',
+    period: {
+      start: new Date(2018, 6, 28, 10, 0, 0),
+      end: new Date(2018, 6, 28, 16, 0, 0)
+    }
+  },
+  {
+    id: 'mobile_002_FF_Day2',
+    city: '行動連署站',
+    title: 'FF32 花博爭豔館同人攤位',
+    address: '台北市中山區玉門街1號',
+    tel: '',
+    openTime: '2018/07/28 10:00-16:00',
+    comment: 'W45, W46: 果爸玩列印；綾靖設計；邢天紙模；口袋工房',
+    position: { lat: 25.0704569, lng: 121.520461 },
+    type: 'mobile',
+    period: {
+      start: new Date(2018, 6, 29, 10, 0, 0),
+      end: new Date(2018, 6, 29, 16, 0, 0),
+      onEvent: new Date(2018, 6, 28, 16, 0, 0)
     }
   }
 ]

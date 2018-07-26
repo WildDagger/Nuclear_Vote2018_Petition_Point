@@ -80,8 +80,8 @@ function jQueryMain(currentPosition, map, $) {
   var $pointAddress = $('#pointAddress')
   var $pointTel = $('#pointTel')
   var $pointOpenTime = $('#pointOpenTime')
+  var $pointComment = $('#pointComment')
   var $btnGetPointRoute = $('#getPointRoute')
-  //var $btnGetNearestPoint = $('#getNearestPoint')
   var markerPoints = []
 
   $.each(petition_location, function(index, item) {
@@ -94,6 +94,25 @@ function jQueryMain(currentPosition, map, $) {
       iconURI = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
     } else {
       iconURI = 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+    }
+
+    // 判斷是否為有效點(如時間尚未過期等)，有效則加入列表等待排序
+    if (item.type == 'mobile') {
+      var currentDateTime = new Date()
+
+      if (item.period.onEvent) {
+        // 判斷現在時間是否尚未到達可公佈時間
+        if (currentDateTime.getTime() < item.period.onEvent.getTime()) {
+          console.log(item)
+          return
+        }
+      }
+
+      // 判斷連署站是否已過期
+      if (currentDateTime.getTime() > item.period.end.getTime()) {
+        return
+      }
+
     }
 
     var marker = new google.maps.Marker({
@@ -109,20 +128,19 @@ function jQueryMain(currentPosition, map, $) {
       $pointAddress.text(item.address)
       $pointTel.html('<a href="tel:' + item.tel + '">' + item.tel + "</a>")
       $pointOpenTime.text(item.openTime)
+      $pointComment.text(item.comment)
       $btnGetPointRoute.attr('href', generateDirectionUrl(currentPosition, item.position)).removeClass('disabled')
 
       map.setZoom(15)
       map.setCenter(marker.getPosition())
     })
 
-    //markerPoint.push(marker)
     var markerPoint = {
       marker: marker,
       distance: CalculateGeoDistance(currentPosition.lat, currentPosition.lng, item.position.lat, item.position.lng, 'K'),
       base: item
     }
 
-    // 判斷是否為有效點(如時間尚未過期等)，有效則加入列表等待排序
     markerPoints.push(markerPoint)
   })
 
@@ -134,6 +152,7 @@ function jQueryMain(currentPosition, map, $) {
   $pointAddress.text(markerPoints[0].base.address)
   $pointTel.html('<a href="tel:' + markerPoints[0].tel + '">' + markerPoints[0].base.tel + "</a>")
   $pointOpenTime.text(markerPoints[0].base.openTime)
+  $pointComment.text(markerPoints[0].base.comment)
   $btnGetPointRoute.attr('href', generateDirectionUrl(currentPosition, markerPoints[0].base.position)).removeClass('disabled')
 
   var linkPath = new google.maps.Polyline({
@@ -156,19 +175,6 @@ function jQueryMain(currentPosition, map, $) {
   })
 
   linkPath.setMap(map)
-
-  // console.log(markerPoint)
-
-  /*
-  $btnGetNearestPoint.on('click', function(e) {
-    e.preventDefault()
-    alert('本功能尚未實裝')
-  })
-  */
-
-  function searchNearestPoint(currentPosition) {
-    //
-  }
 
   function generateDirectionUrl(oriPos, desPos) {
     var urlDirection = 'https://www.google.com/maps/dir/?api=1&origin={ori_lat},{ori_lng}&destination={des_lat},{des_lng}'
