@@ -1,38 +1,27 @@
 var petition_location = [
   {
-    id: 'taipei_001',
+    id: 'taipei_001_Songshan',
     city: '台北市',
-    title: '台北市議員王鴻薇辦公室',
+    title: '台北市議員王鴻薇服務處',
     address: '台北市延壽街145號2樓',
-    tel: '02-27563646',
+    tel: '02-80806449',
+    contact: '王鴻露小姐',
     openTime: '（一）（二）（三）（五）0930 - 1200；（四）1430 - 2100',
     comment: '',
     position: { lat: 25.0569558, lng: 121.5632166 },
     type: 'solid'
   },
   {
-    id: 'taipei_002',
+    id: 'taipei_001_Council',
     city: '台北市',
-    title: 'MaSe咖啡',
-    address: '台北市八德路二段300巷38號',
-    tel: '02-27771231',
-    openTime: '（一） ～ （五）0730 - 1700；（六） ～ （日）1000 - 1900',
+    title: '台北市議員王鴻薇辦公室',
+    address: '台北市仁愛路四段507號611研究室',
+    tel: '02-80806449',
+    contact: '王鴻露小姐',
+    openTime: '（一）～ （五） 09:30 - 16:00 (中午休息)',
     comment: '',
-    position: { lat: 25.0461232, lng: 121.5423724 },
-    type: 'solid',
-    active: false
-  },
-  {
-    id: 'taipei_003',
-    city: '台北市',
-    title: '台北市議員候選人張榮法服務處',
-    address: '台北市萬華區萬大路63號1樓',
-    tel: '02-23023625',
-    openTime: '',
-    comment: '',
-    position: { lat: 25.0308775, lng: 121.5007555 },
-    type: 'solid',
-    active: false
+    position: { lat: 25.038147, lng: 121.5619812 },
+    type: 'solid'
   },
   {
     id: 'taipei_004_Wenshan',
@@ -40,28 +29,30 @@ var petition_location = [
     title: '台北市議員徐弘庭辦公室',
     address: '台北市文山區忠順街一段26巷1弄1號',
     tel: '02-87806918',
+    contact: '游先生',
     openTime: '(一)-(日) 09:00-21:00',
     comment: '',
     position: { lat: 24.9837598, lng: 121.5592489 },
-    type: 'solid'
+    type: 'solid-reception'
   },
   {
     id: 'taipei_004_Council',
     city: '台北市',
     title: '台北市議員徐弘庭議會研究室',
     address: '台北市仁愛路四段507號616研究室',
-    tel: '',
+    tel: '02-27297708#6016',
     openTime: '(一)-(五) 09:30-18:30',
+    contact: '王小姐或李小姐',
     comment: '',
     position: { lat: 25.038147, lng: 121.5619812 },
-    type: 'solid'
+    type: 'solid-reception'
   },
   {
     id: 'taipei_005',
     city: '台北市',
     title: '台北市大安區龍圖里里長蕭萬居辦公室',
     address: '台北市建國南路二段25巷6號 (建國花市旁)',
-    tel: '',
+    tel: '02-27087985',
     openTime: '',
     comment: '',
     position: { lat: 25.0324396, lng: 121.5382386 },
@@ -73,10 +64,11 @@ var petition_location = [
     title: '台北市議員候選人李柏毅競選辦公室',
     address: '台北市文山區興隆路一段235號',
     tel: '02-27293536',
+    contact: '田先生',
     openTime: '(一)~(日) 10:00 - 16:00',
     comment: '',
     position: { lat: 24.9998769, lng: 121.543987 },
-    type: 'solid'
+    type: 'solid-reception'
   },
   {
     id: 'taipei_007',
@@ -84,9 +76,55 @@ var petition_location = [
     title: '權麒法律事務所 (巴毛)',
     address: '台北市羅斯福路91號4樓之2',
     tel: '02-23688013',
+    contact: '巴毛律師',
     openTime: '(一)-(五) 9:00-12:00/14:00-18:00',
     comment: '',
     position: { lat: 25.022693, lng: 121.526267 },
+    type: 'solid-reception'
+  },
+  {
+    id: 'taipei_008',
+    city: '台北市',
+    title: '蘇恆競選總部',
+    address: '台北市中山區中山北路二段65巷2弄5號2樓',
+    tel: '0955-619305',
+    contact: '劉柏辰',
+    openTime: '(一)-(五) 12:00-15:00',
+    comment: '',
+    position: { lat: 25.056744, lng: 121.523906 },
+    type: 'solid'
+  },
+  {
+    id: 'taipei_009',
+    city: '台北市',
+    title: '台北市議員參選人徐巧芯參選辦公室',
+    address: '台北市中山區中山北路二段65巷2弄5號2樓',
+    tel: '02-27470169',
+    openTime: '(一)-(五) 11:00-17:00',
+    comment: '請先電連',
+    position: { lat: 25.0489263, lng: 121.5636213 },
+    type: 'solid'
+  },
+  {
+    id: 'taipei_010',
+    city: '台北市',
+    title: '台北市信義區中興里里長李茂榮服務處',
+    address: '台北市信義區嘉興街58號',
+    tel: '02-27586300',
+    openTime: '(一)-(五) 11:00-17:00',
+    comment: '請先電連',
+    position: { lat: 25.0489263, lng: 121.5636213 },
+    type: 'solid'
+  },
+  {
+    id: 'taipei_011',
+    city: '台北市',
+    title: '台北市議員參選人鍾沛君參選辦公室',
+    address: '台北市文山區興隆路二段228號',
+    tel: '02-89311207',
+    openTime: '（一）-（日）09:00 - 18:00',
+    comment: '辦公室有人就可填寫',
+    position: { lat: 25.0011127, lng: 121.5533833 },
     type: 'solid'
   },
   {
@@ -109,6 +147,41 @@ var petition_location = [
     openTime: '（一） ～ （五）1000 - 1900',
     comment: '',
     position: { lat: 25.0693335, lng: 121.4950589 },
+    type: 'solid-reception'
+  },
+  {
+    id: 'new_taipei_003',
+    city: '新北市',
+    title: '健華新城管委會辦公室',
+    address: '新北市板橋區文化路一段309號',
+    tel: '02-89696000',
+    contact: '任長江先生',
+    openTime: '09:00 - 21:00',
+    comment: '',
+    position: { lat: 25.0199448, lng: 121.4655431 },
+    type: 'solid'
+  },
+  {
+    id: 'new_taipei_004',
+    city: '新北市',
+    title: '板橋文化路郵局',
+    address: '新北市板橋區文化路一段395號',
+    tel: '0989-882991',
+    contact: '張先生',
+    openTime: '（日） 10:00 - 16:00',
+    comment: '',
+    position: { lat: 25.0222021, lng: 121.4672614 },
+    type: 'solid'
+  },
+  {
+    id: 'new_taipei_005',
+    city: '新北市',
+    title: '新北市三峽區慈聖會',
+    address: '新北市三峽區永安街2號1樓',
+    tel: '02-26746832',
+    openTime: '（一）～（六）07:00 - 19:00；（日）07:00-18:00',
+    comment: '廟方有人都可以填寫',
+    position: { lat: 24.9301261, lng: 121.378065 },
     type: 'solid'
   },
   {
@@ -364,6 +437,38 @@ var petition_location = [
       start: new Date(2018, 6, 29, 10, 0, 0),
       end: new Date(2018, 6, 29, 16, 0, 0),
       onEvent: new Date(2018, 6, 28, 16, 0, 0)
+    }
+  },
+  {
+    id: 'mobile_003_0802',
+    city: '行動連署站',
+    title: '台灣鯛民(塔羅美女顧攤)',
+    address: '新竹科學園區科技生活館 新竹市科學園區工業東二路1號',
+    tel: '03-5798762',
+    openTime: '2018/08/02 11:00-20:00',
+    comment: '',
+    position: { lat: 24.7798448, lng: 121.0056449 },
+    type: 'mobile',
+    period: {
+      start: new Date(2018, 7, 2, 11, 0, 0),
+      end: new Date(2018, 7, 2, 20, 0, 0),
+      onEvent: new Date(2018, 7, 2, 0, 0, 0)
+    }
+  },
+  {
+    id: 'mobile_003_0808',
+    city: '行動連署站',
+    title: '台灣鯛民(塔羅美女顧攤)',
+    address: '新竹科學園區科技生活館 新竹市科學園區工業東二路1號',
+    tel: '03-5798762',
+    openTime: '2018/08/02 11:00-20:00',
+    comment: '',
+    position: { lat: 24.7798448, lng: 121.0056449 },
+    type: 'mobile',
+    period: {
+      start: new Date(2018, 7, 8, 11, 0, 0),
+      end: new Date(2018, 7, 8, 20, 0, 0),
+      onEvent: new Date(2018, 7, 2, 20, 0, 0)
     }
   }
 ]

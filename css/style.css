@@ -2,6 +2,20 @@
   min-height: 300px;
 }
 
+ul.legend {
+  list-style-type: none;
+}
+
+.legend li {
+  display: inline-block;
+}
+
+.legend li img {
+  width: 32px;
+  height: 32px;
+  margin-right: 0.5em;
+}
+
 @media screen and (min-width: 768px) {
   #map {
     min-height: 500px;

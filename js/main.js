@@ -92,6 +92,8 @@ function jQueryMain(currentPosition, map, $) {
 
     if (item.type == 'mobile') {
       iconURI = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
+    } else if (item.type == 'solid-reception') {
+      iconURI = './img/icon_reception.png' 
     } else {
       iconURI = 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
     }
@@ -103,7 +105,6 @@ function jQueryMain(currentPosition, map, $) {
       if (item.period.onEvent) {
         // 判斷現在時間是否尚未到達可公佈時間
         if (currentDateTime.getTime() < item.period.onEvent.getTime()) {
-          console.log(item)
           return
         }
       }
